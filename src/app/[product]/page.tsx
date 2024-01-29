@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Product } from "@/types";
 import Rating from "@/components/ui/Rating";
 import { getBase64Image } from "@/utils/getBase64";
+import ImageViewer from "@/components/ImageViewer";
 
 async function getData(id: string) {
   const res = await fetch(`${process.env.BASEURL}/products/${id}`);
@@ -24,33 +25,7 @@ const ProductPage = async ({
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row -mx-4">
           <div className="md:flex-1 px-4">
-            <div>
-              <div className="relative h-[460px] rounded-lg bg-gray-300 mb-4">
-                <Image
-                  width={600}
-                  height={400}
-                  priority
-                  sizes="(max-width: 400px), 100vw, 400px"
-                  blurDataURL={mainImgBlur}
-                  placeholder="blur"
-                  className="w-full h-full object-contain"
-                  src={p.images[0]}
-                  alt="Product Image"
-                />
-              </div>
-              <div className="flex flex-wrap gap-2 my-4">
-                {p.images.map((img, index) => (
-                  <Image
-                    key={index}
-                    className="object-fill overflow-hidden"
-                    width={80}
-                    height={80}
-                    src={img}
-                    alt={`image ${index}`}
-                  />
-                ))}
-              </div>
-            </div>
+            <ImageViewer images={p.images} />
             <div className="flex -mx-2 mb-4 mt-8">
               <div className="w-1/2 px-2">
                 <button className="w-full bg-gray-900  text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800">
