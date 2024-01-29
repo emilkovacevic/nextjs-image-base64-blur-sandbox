@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "../../types";
+import { Product } from "../types";
+import Rating from "./ui/Rating";
 
 const ProductCard = ({ p }: { p: Product }) => {
   return (
@@ -16,15 +17,17 @@ const ProductCard = ({ p }: { p: Product }) => {
           sizes="(max-width: 400px), 100vw, 400px"
         />
       </div>
-      <div className="px-1 py-2">
+      <div className="px-1 py-2 flex flex-col h-44">
         <h2 className="font-bold text-xl mb-2">{p.title}</h2>
-        <div className="flex items-center mb-4">
-          <span className="text-gray-500">{p.category}</span>
-        </div>
         <div>
-          <span className="text-gray-700">${p.price}</span>
-          <span className="ml-2 text-gray-500">{p.rating}</span>
+          <span className="text-gray-500">Catgory: {p.category}</span>
+          <span className="ml-2 text-gray-500">
+            <Rating rating={p.rating} />
+          </span>
         </div>
+        <h3 className="text-center text-gray-700 font-semibold text-2xl pt-4 mt-auto">
+          ${p.price}
+        </h3>
       </div>
     </article>
   );
