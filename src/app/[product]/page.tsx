@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Product } from "@/types";
 import Rating from "@/components/ui/Rating";
+import { getBase64Image } from "@/utils/getBase64";
 
 async function getData(id: string) {
   const res = await fetch(`${process.env.BASEURL}/products/${id}`);
@@ -16,6 +17,7 @@ const ProductPage = async ({
   params: { product: string };
 }) => {
   const p = (await getData(product)) as Product;
+  const mainImgBlur = await getBase64Image(p.images[0]);
 
   return (
     <div className="bg-gray-100 py-8">
@@ -25,9 +27,12 @@ const ProductPage = async ({
             <div>
               <div className="relative h-[460px] rounded-lg bg-gray-300 mb-4">
                 <Image
-                  fill
+                  width={600}
+                  height={400}
                   priority
                   sizes="(max-width: 400px), 100vw, 400px"
+                  blurDataURL={mainImgBlur}
+                  placeholder="blur"
                   className="w-full h-full object-contain"
                   src={p.images[0]}
                   alt="Product Image"
