@@ -2,11 +2,17 @@
 
 import React from "react";
 
-import FullScreenView from "./FullScreen";
+import FullScreenView from "./FullScreenView";
 import ThumbnailImages from "./Thumbnails";
 import MainImage from "./MainImage";
 
-export default function ImageViewer({ images }: { images: string[] }) {
+export default function ImageViewer({
+  images,
+  mainImgBlur,
+}: {
+  images: string[];
+  mainImgBlur: string;
+}) {
   const [mainImage, setMainImage] = React.useState(images[0]);
   const [isFullScreen, setIsFullScreen] = React.useState(false);
 
@@ -26,7 +32,11 @@ export default function ImageViewer({ images }: { images: string[] }) {
 
   return (
     <section>
-      <MainImage mainImage={mainImage} setIsFullScreen={setIsFullScreen} />
+      <MainImage
+        mainImgBlur={mainImgBlur}
+        mainImage={mainImage}
+        setIsFullScreen={setIsFullScreen}
+      />
       <ThumbnailImages
         isFullScreen={isFullScreen}
         images={images}

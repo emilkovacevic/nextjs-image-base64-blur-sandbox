@@ -31,9 +31,9 @@ const HomePage = () => {
   return (
     <>
       <H1 title="Product list" />
-      <Products />
-      {/* <Suspense fallback={<SuspenceProducts />}>
-      </Suspense> */}
+      <Suspense fallback={<SuspenceProducts />}>
+        <Products />
+      </Suspense>
     </>
   );
 };

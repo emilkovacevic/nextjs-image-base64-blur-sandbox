@@ -4,9 +4,11 @@ import { Dispatch, SetStateAction } from "react";
 const MainImage = ({
   mainImage,
   setIsFullScreen,
+  mainImgBlur,
 }: {
   mainImage: string;
   setIsFullScreen: Dispatch<SetStateAction<boolean>>;
+  mainImgBlur: string;
 }) => {
   return (
     <button
@@ -18,6 +20,8 @@ const MainImage = ({
         className="h-[400px] object-scale-down"
         width={400}
         height={400}
+        blurDataURL={mainImgBlur}
+        placeholder="blur"
         alt="main image"
         src={mainImage}
       />
