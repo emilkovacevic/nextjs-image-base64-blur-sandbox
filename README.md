@@ -4,4 +4,4 @@ This project uses base64 blur data as a placeholder image while loading images i
 
 
 
-[![Watch the video](cover-photo.png)](https://www.github.com/emilkovacevic/nextjs-image-gallery/blob/main/demo.mkv)
+[![Watch the video](cover-photo.png)](https://youtu.be/Q-s42vf4KfA)
