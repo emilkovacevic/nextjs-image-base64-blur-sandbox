@@ -2,6 +2,4 @@
 
 This project uses base64 blur data as a placeholder image while loading images in Next.j
 
-
-
-[![Watch the video](cover-photo.png)](https://youtu.be/Q-s42vf4KfA)
+[![demo](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fyoutu.be%2FQ-s42vf4KfA)](https://youtu.be/Q-s42vf4KfA)
