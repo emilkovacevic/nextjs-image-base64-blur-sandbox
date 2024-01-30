@@ -12,12 +12,12 @@ const MainImage = ({
 }) => {
   return (
     <button
-      className="block relative"
+      className="h-[450px]"
       type="button"
       onClick={() => setIsFullScreen((prev) => !prev)}
     >
       <Image
-        className="h-[400px] object-scale-down"
+        className="w-full h-full object-contain"
         width={400}
         height={400}
         blurDataURL={mainImgBlur}

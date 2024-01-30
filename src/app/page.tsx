@@ -4,10 +4,8 @@ import { Product } from "@/types";
 import ProductCard from "@/components/ProductCard";
 import SuspenceProducts from "@/components/suspence/Products";
 import { getBase64Images } from "@/utils/getBase64";
-import { unstable_noStore } from "next/cache";
 
 async function getData() {
-  unstable_noStore();
   const res = await fetch(`${process.env.BASEURL}/products`);
   if (!res.ok) {
     throw new Error("Failed to fetch data");

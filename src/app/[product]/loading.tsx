@@ -9,7 +9,7 @@ const loading = () => {
               <div className="w-full h-64 animate-pulse bg-gray-300" />
 
               {/* Thumbnails Skeleton */}
-              <div className="flex gap-4 items-center flex-wrap">
+              <div className="flex gap-4 items-center flex-wrap mt-8">
                 <div className="w-20 h-20 animate-pulse bg-gray-300" />
                 <div className="w-20 h-20 animate-pulse bg-gray-300" />
                 <div className="w-20 h-20 animate-pulse bg-gray-300" />
@@ -37,15 +37,6 @@ const loading = () => {
                     <span className="font-bold text-gray-600 h-6 bg-gray-300 animate-pulse" />
                     <span className="font-bold text-green-600 h-6 bg-gray-300 animate-pulse" />
                   </div>
-                  <div>
-                    <span className="text-gray-700 h-6 bg-gray-300 animate-pulse" />
-                    <span className="font-bold text-gray-600 h-6 bg-gray-300 animate-pulse" />
-                  </div>
-                </div>
-                <div>
-                  <span className="font-bold text-gray-700 h-6 bg-gray-300 animate-pulse" />
-                  <p className="text-gray-600 text-sm mt-2 h-6 bg-gray-300 animate-pulse" />
-                  <p className="text-gray-600 text-sm mt-2 h-14 bg-gray-300 animate-pulse" />
                 </div>
               </div>
             </div>

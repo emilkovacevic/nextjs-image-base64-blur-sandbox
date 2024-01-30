@@ -85,7 +85,7 @@ const ThumbnailImages = ({
             key={image}
           >
             <Image
-              className="w-24 h-24"
+              className="w-24 h-24 object-scale-down"
               width={96}
               height={96}
               alt="thumbnail image"
