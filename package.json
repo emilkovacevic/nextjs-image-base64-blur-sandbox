@@ -2,7 +2,7 @@
   "name": "galery-app",
   "version": "0.1.0",
   "author": "Emil Kovacevic",
-  "private": true,
+  "private": false,
   "scripts": {
     "prepare": "husky install && npx husky add .husky/pre-commit \"npm run lint:fix\"",
     "dev": "next dev",
